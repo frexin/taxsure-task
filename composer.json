@@ -1,0 +1,28 @@
+{
+  "name": "taxsure/taxsure",
+  "description": "Test task",
+  "minimum-stability": "dev",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Kirill Senkevich",
+      "email": "frexin@gmail.com"
+    }
+  ],
+  "require": {
+    "doctrine/orm": "^2.6.2",
+    "doctrine/migrations": "2.0",
+    "symfony/http-kernel": "^4.3@dev",
+    "symfony/routing": "^4.3@dev",
+    "symfony/config": "^4.3@dev",
+    "symfony/yaml": "^4.3@dev",
+    "ext-json": "*",
+    "phpunit/phpunit": "7.5.x-dev",
+    "vlucas/phpdotenv": "^3.3@dev"
+  },
+  "autoload" : {
+    "psr-4" : {
+      "TaxSure\\" : "src/"
+    }
+  }
+}

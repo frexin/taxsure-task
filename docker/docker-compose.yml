@@ -1,0 +1,22 @@
+version: '2.1'
+
+services:
+  app:
+    build: ./image
+    image: taxsure/webapp
+    restart: always
+    container_name: taxsure
+    volumes:
+     - .:/var/www/html
+    ports:
+      - "8080:80"
+  mysql:
+    container_name: mysql
+    image: mysql:5.7.17
+    restart: always
+    volumes:
+      - ./data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PW}
+      - MYSQL_DATABASE=taxsure
+#    env_file: .env

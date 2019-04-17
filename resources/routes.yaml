@@ -1,0 +1,19 @@
+get_customers_list:
+  path: /customers
+  controller: TaxSure\controllers\CustomerController::getCustomersList
+  methods: GET
+
+get_customer:
+  path: /customers/{id}
+  controller: TaxSure\controllers\CustomerController::getCustomer
+  methods: GET
+
+create_customer:
+  path: /customers
+  controller: TaxSure\controllers\CustomerController::createCustomer
+  methods: POST
+
+update_customer:
+  path: /customers/{id}
+  controller: TaxSure\controllers\CustomerController::updateCustomer
+  methods: PUT
